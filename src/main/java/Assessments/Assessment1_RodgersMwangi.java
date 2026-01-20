@@ -10,12 +10,12 @@ public class Assessment1_RodgersMwangi {
     public static void main(String[] args){
         
 
-        //variableOperations();   //Quiz 1
+        variableOperations();   //Quiz 1
         //gradeCalculator();      //Quiz 2
         //numberSequence();       //Quiz 3
         //inputValidation();      //Quiz 4
         //patternPrinting();      //Quiz 5
-        patternPrintingBonus();   //Quiz 5 bonus
+        //patternPrintingBonus();   //Quiz 5 bonus
     }
 
     public static void variableOperations(){
