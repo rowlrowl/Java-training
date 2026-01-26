@@ -40,7 +40,9 @@ public class CheckingAccount extends BankAccount{
     @Override
     public void withdraw(double amount){ //overridden withdraw method
         if(amount>0 && amount<=(balance+overdraftLimit)){
+            
             balance-=amount;
+            
         }else if(amount<=0){
             System.out.println("You cannot withdraw amount equaling zero or less");
             
@@ -55,7 +57,7 @@ public class CheckingAccount extends BankAccount{
     public String toString(){ //overridden tostring method
         System.out.println();
         System.out.println("=======================================");
-        return "Account Number: "+ super.getAccountNumber() + "\nAccount Holder: "+super.getAccountHolder()+ "\nBalance: "+super.balance+ "\nOverdraft Limit: "+ overdraftLimit;
+        return "Account Number: "+ super.getAccountNumber() + "\nAccount Holder: "+super.getAccountHolder()+ "\nBalance: "+super.getBalance()+ "\nOverdraft Limit: "+ overdraftLimit;
         
     }
 }

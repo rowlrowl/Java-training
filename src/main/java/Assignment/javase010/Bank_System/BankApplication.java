@@ -54,8 +54,8 @@ public class BankApplication {
                     System.out.println("2. Deposit to Checking account");
                     int accountOption=scanner2.nextInt();
                     while(accountOption!=1 && accountOption!=2){
-                        System.out.println("Invalid option, try again" + accountOption);
-                        scanner2.nextInt();
+                        System.out.println("Invalid option, try again");
+                        accountOption=scanner2.nextInt();
                     }
                     if(accountOption==1){
                         savingsAccount1=bank.findSavingsAccount();
@@ -91,7 +91,7 @@ public class BankApplication {
                     int accountOption2=scanner2.nextInt();
                     while(accountOption2!=1 && accountOption2!=2){
                         System.out.println("Invalid option, try again");
-                        scanner2.nextInt();
+                        accountOption2=scanner2.nextInt();
                     }
                     if(accountOption2==1){
                         savingsAccount1=bank.findSavingsAccount();
@@ -125,7 +125,7 @@ public class BankApplication {
                     int accountOption3=scanner2.nextInt();
                     while(accountOption3!=1 && accountOption3!=2){
                         System.out.println("Invalid option, try again");
-                        scanner2.nextInt();
+                        accountOption3=scanner2.nextInt();
                     }
                     if(accountOption3==1){
                         savingsAccount1=bank.findSavingsAccount();
@@ -133,14 +133,14 @@ public class BankApplication {
                             System.out.println("Account not found");
                             break;
                         }
-                        savingsAccount1.getBalance();
+                        System.out.println("Your balance is "+savingsAccount1.getBalance());
                     }else{
                         checkingAccount1=bank.findCheckingAccount();
                         if(checkingAccount1==null){
                             System.out.println("Account not found");
                             break;
                         }
-                        checkingAccount1.getBalance();
+                        System.out.println("Tour Balance is "+checkingAccount1.getBalance());
                     }
                     break;
                 case 6: //Apply interest 

@@ -24,8 +24,10 @@ public class SavingsAccount extends BankAccount{
 
     @Override
     public void withdraw(double amount){ //overridden withdraw method
-        if(amount>0 && amount<=(balance-100)){
+        if(amount>0 && amount<=(super.getBalance()-100)){
+            double balance=super.getBalance();
             balance-=amount;
+            super.setBalance(balance);
         }
         else if(amount<=0){
             System.out.println("You cannot withdraw amount equaling zero or less");
@@ -38,8 +40,10 @@ public class SavingsAccount extends BankAccount{
 
     //method to apply interest
     public void applyInterest(){
+        double balance=super.getBalance();
         double interest=interestRate*balance;
         balance+=interest;
+        super.setBalance(balance);
     }
 
 }
