@@ -24,4 +24,17 @@ Withdrawal Operations
                         savings account - fail
     minimum balance enforcement - savings account - 100 is the minimum balance allowed.
 */
+
+/*
+Polymorphic behaviour
+    bank treating different accounts uniformly - success
+    different toString outputs                 - success
+*/
+
+/*
+Interest applications
+    Savings account interest calculation - success
+    Checking account (no interest)       - success
+*/
+
 }
